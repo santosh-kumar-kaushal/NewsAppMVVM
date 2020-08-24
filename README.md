@@ -5,6 +5,5 @@ An android app which demonstrate uses of android jetpack, mvvm with coroutine wi
 It also demonstrate the modular approach to build an android application.
 Offile storage is implemented.
 This is a complete packet of new stuff available for android.
-
-![Screenshot_1598277748](https://user-images.githubusercontent.com/43371182/91054416-6467ac00-e641-11ea-8e9e-d4fbd079a3a4.png)
-![Screenshot_1598278096](https://user-images.githubusercontent.com/43371182/91054439-6598d900-e641-11ea-9c1c-d3dc78e445fa.png)
+<img width="235" alt="Screenshot 2020-08-24 at 7 41 29 PM" src="https://user-images.githubusercontent.com/43371182/91055260-09828480-e642-11ea-8491-e923cd906924.png">
+<img width="238" alt="Screenshot 2020-08-24 at 7 41 52 PM" src="https://user-images.githubusercontent.com/43371182/91055267-0be4de80-e642-11ea-9ec7-f9360ea9b8c4.png">
