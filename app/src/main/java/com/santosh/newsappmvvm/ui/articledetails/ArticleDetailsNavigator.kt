@@ -1,0 +1,3 @@
+package com.santosh.newsappmvvm.ui.articledetails
+
+interface ArticleDetailsNavigator

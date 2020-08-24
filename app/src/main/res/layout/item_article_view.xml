@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.santosh.newsappmvvm.ui.article.ArticleItemViewModel" />
+    </data>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@color/black"
+            android:onClick="@{() -> viewModel.onItemClick()}"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/coverImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    app:imageUrl="@{viewModel.imageUrl}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/titleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        app:layout_constraintBottom_toTopOf="@id/authorTextView"
+                        android:layout_marginBottom="24dp"
+                        android:text="@{viewModel.title}"
+                        android:textColor="@color/title_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:text="Whistle-Blower Complaint Sets Off a Battle Involving Trump" />
+
+                    <TextView
+                        android:id="@+id/authorTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:singleLine="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:text="@{viewModel.author}"
+                        android:textColor="@color/publisher_color"
+                        android:textSize="12sp"
+                        tools:text="CNN"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="0dp" />
+
+                        <TextView
+                            android:id="@+id/dateTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="12dp"
+                            android:singleLine="true"
+                            app:layout_constraintStart_toEndOf="@+id/authorTextView"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:text="@{viewModel.publishedDate.substring(0,10).replace('-',' ')}"
+                            android:textColor="@color/publisher_color"
+                            android:textSize="12sp"
+                            tools:text="2019-09-19"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="0dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+</layout>
