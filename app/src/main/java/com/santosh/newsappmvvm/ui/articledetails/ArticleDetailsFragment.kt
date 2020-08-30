@@ -80,13 +80,6 @@ class ArticleDetailsFragment :
     }
 
     private fun setUpToolbar() {
-        if (activity != null) {
-            (activity as MainActivity).setSupportActionBar(getViewDataBinding().toolbar)
-            val actionBar = (activity as MainActivity).supportActionBar
-            actionBar?.setDisplayHomeAsUpEnabled(true)
-            actionBar?.setDisplayShowHomeEnabled(true)
-            actionBar?.setDisplayShowTitleEnabled(false)
-        }
         getViewDataBinding().toolbar.setNavigationOnClickListener {
             if (activity != null) {
                 activity?.onBackPressed()
